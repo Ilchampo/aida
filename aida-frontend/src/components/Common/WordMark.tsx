@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 import { MicIcon } from 'lucide-react';
 
 interface WordmarkProps {
@@ -11,7 +12,11 @@ const Wordmark: React.FC<WordmarkProps> = (props) => {
     const { showIcon = true, className = '' } = props;
 
     return (
-        <div className={`flex items-center gap-2.5 ${className}`}>
+        <Link
+            to="/"
+            className={`flex items-center gap-2.5 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400/40 ${className}`}
+            aria-label="AIDA home"
+        >
             {showIcon && (
                 <span
                     className="relative flex h-8 w-8 items-center justify-center rounded-md border border-cyan-400/40 bg-cyan-500/10 shadow-glow-cyan"
@@ -26,7 +31,7 @@ const Wordmark: React.FC<WordmarkProps> = (props) => {
                     DA
                 </span>
             </span>
-        </div>
+        </Link>
     );
 };
 

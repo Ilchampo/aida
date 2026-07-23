@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { NavLink } from 'react-router-dom';
-import { ChartColumnIcon, HistoryIcon } from 'lucide-react';
+import { BriefcaseIcon, ChartColumnIcon, HistoryIcon } from 'lucide-react';
 
 import Wordmark from '@components/Common/WordMark';
 import UserMenu from '@components/Common/UserMenu';
@@ -32,6 +32,10 @@ const AppHeader: React.FC<AppHeaderProps> = (props) => {
 
                     {showNav && (
                         <nav className="hidden items-center gap-1 sm:flex" aria-label="Primary">
+                            <NavLink to="/" end className={navLinkClass}>
+                                <BriefcaseIcon className="h-3.5 w-3.5" aria-hidden="true" />
+                                Interviews
+                            </NavLink>
                             <NavLink to="/progress" className={navLinkClass}>
                                 <HistoryIcon className="h-3.5 w-3.5" aria-hidden="true" />
                                 Progress

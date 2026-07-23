@@ -76,14 +76,6 @@ const CandidateBriefingPanel: React.FC<CandidateBriefingPanelProps> = (props) =>
                 </div>
 
                 <div className="mt-auto space-y-3 border-t border-indigo-500/20 pt-5">
-                    <Link
-                        to={`/leaderboard?jobId=${job._id}`}
-                        className="flex w-full items-center justify-center gap-2 rounded-md border border-slate-700 bg-void-950/40 px-4 py-2.5 font-mono text-[11px] uppercase tracking-wider text-slate-300 transition hover:border-cyan-400/40 hover:text-cyan-300"
-                    >
-                        <ChartColumnIcon className="h-3.5 w-3.5" aria-hidden="true" />
-                        Role leaderboard
-                    </Link>
-
                     {practice.remainingAttempts === 0 ? (
                         <div className="flex w-full items-center justify-center gap-2 rounded-md border border-emerald-400/40 bg-emerald-400/10 px-6 py-3.5 font-display text-sm font-bold uppercase tracking-widest text-emerald-300">
                             <CheckCircle2Icon className="h-5 w-5" aria-hidden="true" />
@@ -110,6 +102,14 @@ const CandidateBriefingPanel: React.FC<CandidateBriefingPanelProps> = (props) =>
                             </p>
                         </>
                     )}
+
+                    <Link
+                        to={`/leaderboard?jobId=${job._id}`}
+                        className="flex w-full items-center justify-center gap-2 rounded-md border border-slate-700 bg-void-950/40 px-4 py-2.5 font-mono text-[11px] uppercase tracking-wider text-slate-300 transition hover:border-cyan-400/40 hover:text-cyan-300"
+                    >
+                        <ChartColumnIcon className="h-3.5 w-3.5" aria-hidden="true" />
+                        Role leaderboard
+                    </Link>
 
                     {practice.completedAttempts > 0 && (
                         <Link
