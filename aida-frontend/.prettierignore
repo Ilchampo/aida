@@ -1,0 +1,10 @@
+node_modules
+build
+dist
+.next
+out
+coverage
+*.log
+*.tmp
+public/build
+public/dist

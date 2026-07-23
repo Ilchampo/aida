@@ -1,0 +1,19 @@
+export const AUTH_PUBLIC_WINDOW_MS = 60 * 1000;
+
+export const AUTH_PUBLIC_LIMIT = 10;
+
+export const AUTHENTICATED_READ_WINDOW_MS = 60 * 1000;
+
+export const AUTHENTICATED_READ_LIMIT = 100;
+
+export const SUBMIT_TURN_WINDOW_MS = 10 * 60 * 1000;
+
+export const SUBMIT_TURN_LIMIT = 30;
+
+export const COMPLETE_INTERVIEW_WINDOW_MS = 60 * 60 * 1000;
+
+export const COMPLETE_INTERVIEW_LIMIT = 5;
+
+export const SPEECH_SYNTHESIZE_WINDOW_MS = 10 * 60 * 1000;
+
+export const SPEECH_SYNTHESIZE_LIMIT = 20;

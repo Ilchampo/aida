@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+    --color-void-950: #05070f;
+    --color-void-900: #0a0f1e;
+    --color-void-800: #111827;
+    --shadow-glow: 0 0 24px rgb(99 102 241 / 0.18);
+    --shadow-glow-cyan: 0 0 24px rgb(34 211 238 / 0.22);
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+body {
+    font-family:
+        'Rajdhani',
+        system-ui,
+        -apple-system,
+        sans-serif;
+    background-color: #05070f;
+    color: #e2e8f0;
+    -webkit-font-smoothing: antialiased;
+}
+.font-display {
+    font-family: 'Orbitron', system-ui, sans-serif;
+}
+.font-mono-hud {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0f1e;
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 8px;
+    border: 2px solid #0a0f1e;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
+@keyframes scan-sweep {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+.animate-scan {
+    animation: scan-sweep 4s linear infinite;
+}
+@keyframes drift {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(20px, -20px) scale(1.08);
+    }
+}
+.animate-drift {
+    animation: drift 18s ease-in-out infinite;
+}
+.animate-drift-slow {
+    animation: drift 26s ease-in-out infinite;
+}
+@keyframes grid-pulse {
+    0%,
+    100% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+.animate-grid-pulse {
+    animation: grid-pulse 6s ease-in-out infinite;
+}
+@keyframes card-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.animate-card-fade-in {
+    animation: card-fade-in 0.4s ease-out forwards;
+}
+@keyframes record-pulse-ring {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+.record-pulse-ring {
+    animation: record-pulse-ring 2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+.record-pulse-ring-delayed {
+    animation: record-pulse-ring 2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    animation-delay: 1s;
+}
+@keyframes speak-pulse-ring {
+    0% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1.55);
+        opacity: 0;
+    }
+}
+.speak-pulse-ring {
+    animation: speak-pulse-ring 1.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+.speak-pulse-ring-delayed {
+    animation: speak-pulse-ring 1.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    animation-delay: 0.8s;
+}
+@keyframes mic-waiting-breathe {
+    0%,
+    100% {
+        opacity: 0.45;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+.animate-mic-waiting {
+    animation: mic-waiting-breathe 2.4s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+    .animate-scan,
+    .animate-drift,
+    .animate-drift-slow,
+    .animate-grid-pulse,
+    .animate-card-fade-in,
+    .record-pulse-ring,
+    .record-pulse-ring-delayed,
+    .speak-pulse-ring,
+    .speak-pulse-ring-delayed,
+    .animate-mic-waiting {
+        animation: none;
+    }
+    .animate-card-fade-in {
+        opacity: 1;
+    }
+}
