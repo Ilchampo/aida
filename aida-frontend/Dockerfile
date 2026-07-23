@@ -13,6 +13,9 @@ COPY src ./src
 ARG VITE_API_BASE_URL=/api
 ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
 
+ARG VITE_GOOGLE_CLIENT_ID=347050751960-6vfqma8bq9i7eke1dj6sj0ico5u9stc8.apps.googleusercontent.com
+ENV VITE_GOOGLE_CLIENT_ID=$VITE_GOOGLE_CLIENT_ID
+
 RUN npm run build
 
 FROM nginx:1.27-alpine AS runner
